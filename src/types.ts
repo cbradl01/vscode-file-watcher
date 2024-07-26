@@ -49,6 +49,7 @@ interface ICommand<T> {
   readonly shell: string;
   readonly vscodeTask: string | string[];
   readonly isAsync: boolean;
+  readonly revert: boolean;
   readonly notMatch?: string;
 }
 

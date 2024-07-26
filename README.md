@@ -33,7 +33,10 @@ Add "filewatcher" configuration to user or workspace settings.
   * "cmd" - command to run. Can include parameters that will be replaced at runtime (see Placeholder Tokens section below).
   * "vscodeTask" - Name of a VS Code task defined in tasks.json or commands to execute. Only works if cmd value does not exist. Must be a string (e.g. command id) or array of strings (e.g. ['workbench.action.tasks.runTask', 'some-task-name'] and etc.)
   > NOTE Since there is no universal listener for the all execution of the vscode commands and tasks, which will wait for the end of the process execution. The logs in the output and the status bar will only show whether the command was run or not.
-  * "isAsync" (optional) - defaults to false. If true, next command will be run before this one finishes.
+  * "isAsync" (optional) - defaults to false. If true, next command will be run before
+    this one finishes.
+  * "revert" (optional) - defaults to false. If true, file will be reverted after
+    command finishes.
 
 ## Placeholder Tokens
 Commands support placeholders similar to tasks.json.

@@ -166,6 +166,10 @@
 								"type": "boolean",
 								"description": "Run command asynchronously."
 							},
+							"revert": {
+								"type": "boolean",
+								"description": "Revert file after running command."
+							},
 							"event": {
 								"type": "string",
 								"description": "events onFileChange, onFileChangeImmediate, onFileDelete, onFileRename, onFileCreate, onFolderChange, onFolderCreate, onFolderDelete",
