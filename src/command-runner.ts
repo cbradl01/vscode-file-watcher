@@ -97,7 +97,9 @@ class CommandRunner {
     handlers: IProcessHandlers
   ): Promise<Array<StatusType | Promise<StatusType>>> {
     const proccessResult: Array<StatusType | Promise<StatusType>> = [];
-
+    if (command.revert) {
+      vscode.commands.executeCommand("workbench.action.files.revert");
+    }
     for (const command of commands) {
       const proccessPromise: Promise<StatusType> = this.runCommand(
         command,
