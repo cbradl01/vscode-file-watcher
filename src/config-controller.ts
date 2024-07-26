@@ -44,6 +44,7 @@ class ConfigController {
       const {
         shell: commandShell,
         isAsync,
+        revert,
         vscodeTask,
         cmd,
         ...restOptions
@@ -55,6 +56,7 @@ class ConfigController {
         ...restOptions,
         cmd: this.getPreparedCmd(cmd, vscodeTask),
         isAsync: Boolean(isAsync),
+        revert: Boolean(revert),
         execOptions,
       };
     };
